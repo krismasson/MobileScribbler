@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.MainPage">
+    <AbsoluteLayout>
+        <local:PinchToZoomContainer AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Image x:Name="myImage" />
+        </local:PinchToZoomContainer>
+
+        <Button x:Name="Button1" Text="Update Image" Clicked="Button1_Clicked"
+                AbsoluteLayout.LayoutBounds="0,1,150,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button2" Text="Switch to Sketchboard" Clicked="Button2_Clicked"
+            AbsoluteLayout.LayoutBounds="1,1,150,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0" />
+    </AbsoluteLayout>
+</ContentPage>
+

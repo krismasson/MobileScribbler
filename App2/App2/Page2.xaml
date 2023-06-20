@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="App2.Page2">
+
+    <AbsoluteLayout>
+        <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="OnCanvasViewPaintSurface"
+                           Touch="OnCanvasViewTouch"
+                           EnableTouchEvents="True"
+                           BackgroundColor="White"
+                           AbsoluteLayout.LayoutBounds="0, 0.5, 1, .5"
+                           AbsoluteLayout.LayoutFlags="All" />
+        <Button x:Name="eraseButton" Text="Erase" Clicked="OnEraseButtonClicked"
+                AbsoluteLayout.LayoutBounds="0,1,130,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="sendButton" Text="Generate" Clicked="OnSendButtonClicked"
+                AbsoluteLayout.LayoutBounds=".5,1,100,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button1" Text="1" Clicked="OnButton1Clicked"
+                AbsoluteLayout.LayoutBounds=".01,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button2" Text="2" Clicked="OnButton2Clicked"
+                AbsoluteLayout.LayoutBounds=".15,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button3" Text="3" Clicked="OnButton3Clicked"
+                AbsoluteLayout.LayoutBounds=".29,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button4" Text="4" Clicked="OnButton4Clicked"
+                AbsoluteLayout.LayoutBounds=".43,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button5" Text="5" Clicked="OnButton5Clicked"
+                AbsoluteLayout.LayoutBounds=".57,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button6" Text="6" Clicked="OnButton6Clicked"
+                AbsoluteLayout.LayoutBounds=".71,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button7" Text="7" Clicked="OnButton7Clicked"
+                AbsoluteLayout.LayoutBounds=".85,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button8" Text="8" Clicked="OnButton8Clicked"
+                AbsoluteLayout.LayoutBounds=".99,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button9" Text="Random" Clicked="OnButton9Clicked"
+                AbsoluteLayout.LayoutBounds=".01,.84,100,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="newButton" Text="Switch to Viewer" Clicked="OnNewButtonClicked"
+            AbsoluteLayout.LayoutBounds="1,1,130,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0" />
+        <Entry x:Name="textInputEntry" TextChanged="OnTextInputEntryTextChanged" 
+       AbsoluteLayout.LayoutBounds=".6,.93,370,40" AbsoluteLayout.LayoutFlags="PositionProportional" 
+       BackgroundColor="Gray" ClearButtonVisibility="WhileEditing" />
+
+
+
+    </AbsoluteLayout>
+
+
+</ContentPage>
