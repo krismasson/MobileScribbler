@@ -7,5 +7,6 @@ namespace App2
     public static class SharedData
     {
         public static string EnteredText { get; set; }
+        public static bool? Genbutton { get; set; }
     }
 }

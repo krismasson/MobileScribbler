@@ -18,23 +18,25 @@
         <Button x:Name="sendButton" Text="Generate" Clicked="OnSendButtonClicked"
                 AbsoluteLayout.LayoutBounds=".5,1,100,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button1" Text="1" Clicked="OnButton1Clicked"
-                AbsoluteLayout.LayoutBounds=".01,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".01,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button2" Text="2" Clicked="OnButton2Clicked"
-                AbsoluteLayout.LayoutBounds=".15,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".15,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button3" Text="3" Clicked="OnButton3Clicked"
-                AbsoluteLayout.LayoutBounds=".29,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".29,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button4" Text="4" Clicked="OnButton4Clicked"
-                AbsoluteLayout.LayoutBounds=".43,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".43,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button5" Text="5" Clicked="OnButton5Clicked"
-                AbsoluteLayout.LayoutBounds=".57,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".57,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button6" Text="6" Clicked="OnButton6Clicked"
-                AbsoluteLayout.LayoutBounds=".71,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".71,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button7" Text="7" Clicked="OnButton7Clicked"
-                AbsoluteLayout.LayoutBounds=".85,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".85,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button8" Text="8" Clicked="OnButton8Clicked"
-                AbsoluteLayout.LayoutBounds=".99,.87,50,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".99,.87,50,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="Button9" Text="Random" Clicked="OnButton9Clicked"
-                AbsoluteLayout.LayoutBounds=".01,.84,100,30" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+                AbsoluteLayout.LayoutBounds=".01,.82,100,40" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
+        <Button x:Name="Button10" Text="undo" Clicked="OnButton10Clicked"
+                AbsoluteLayout.LayoutBounds=".989,.815,60,60" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0"/>
         <Button x:Name="newButton" Text="Switch to Viewer" Clicked="OnNewButtonClicked"
             AbsoluteLayout.LayoutBounds="1,1,130,50" AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0" />
         <Entry x:Name="textInputEntry" TextChanged="OnTextInputEntryTextChanged" 

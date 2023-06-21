@@ -14,6 +14,9 @@ using System.ComponentModel;
 using System.Reflection;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Shapes;
+using System.Threading;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using System.Timers;
 
 namespace App2
 {
@@ -23,12 +26,22 @@ namespace App2
     {
         private bool isDrawing;
         private SKPath currentPath;
+        
 
         public Page2()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
+            if (SharedData.Genbutton == null)
+            {
+                sendButton.IsEnabled = true;   
+            } 
+            else if (SharedData.Genbutton == false)
+            {
+                sendButton.IsEnabled = false; //What is this? timers are friggin weird. I guess the other one goes away if the tab switches
+                System.Threading.Timer timer = new System.Threading.Timer(TimerElapsed, null, 7000, Timeout.Infinite);
+            }
 
             textInputEntry.Text = SharedData.EnteredText;
             textInputEntry.Focused += OnTextInputEntryFocused;
@@ -155,6 +168,14 @@ namespace App2
             string randomText = PrintHelper.GetRandomText();
             textInputEntry.Text = randomText;
         }
+        private void OnButton10Clicked(object sender, System.EventArgs e)
+        {
+            if (PathManager.Paths.Count > 0)
+            {
+                PathManager.Paths.RemoveAt(PathManager.Paths.Count - 1);
+                canvasView.InvalidateSurface();
+            }
+        }
 
         private async void OnNewButtonClicked(object sender, EventArgs e)
         {
@@ -164,8 +185,20 @@ namespace App2
         {
             SharedData.EnteredText = e.NewTextValue;
         }
+        private void TimerElapsed(object state)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                sendButton.IsEnabled = true;
+                SharedData.Genbutton = true;
+            });
+        }
         private async void OnSendButtonClicked(object sender, EventArgs e)
         {
+            sendButton.IsEnabled = false;
+            SharedData.Genbutton = false;
+            System.Threading.Timer timer = new System.Threading.Timer(TimerElapsed, null, 15000, Timeout.Infinite); // 10 seconds
+            
 
             // Convert the drawing to an image
             var image = ConvertDrawingToImage();
